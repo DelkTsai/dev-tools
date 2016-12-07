@@ -12,3 +12,9 @@ ps aux |grep mysqld
 ```js
 service mysqld status
 ```
+* 3、登陆数据库
+
+```js
+mysql -uroot -p
+然后再输入密码
+```
