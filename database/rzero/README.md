@@ -1,20 +1,28 @@
-# linux-mysql
-这里收集了Linux环境下操作MySQL信息
+# MySQL数据库自增主键归零的几种方法
+MySQL自增主键归零的方法：
 
-### 一、常用命令
-* 1、查看Mysql服务运行状态
-
+### 一、如果曾经的数据都不需要的话，可以直接清空所有数据，并将自增字段恢复从1开始计数：
 ```js
-ps aux |grep mysqld
+truncate table table_name;
 ```
-* 2、检测mysql是否已经启动
+### 二、当用户没有truncate的权限时且曾经的数据不需要时：
+* 1、删除原有主键：
 
 ```js
-service mysqld status
+alter table 'table_name' drop 'id';
 ```
-* 3、登陆数据库
+* 2、添加新主键：
 
 ```js
-mysql -uroot -p
-然后再输入密码
+alter table 'table_name' add 'id' int(11) not null first;
+```
+* 3、设置新主键：
+
+```js
+alter table 'table_name' modify column 'id' int(11) not null auto_increment, add primary key(id);
+```
+### 三、当用户没有权限时：
+* 1、可以直接设置数据表的 AUTO_INCREMENT 值为想要的初始值，比如10000：
+```js
+alter table 'table_name' auto_increment = 10000;
 ```
