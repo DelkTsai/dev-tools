@@ -11,5 +11,5 @@
 [教程四：Vue+Webpack使用规范](https://github.com/sosout/dev-tools/tree/master/vue-webpack/normal)
 
 ##数据库-mysql
-[教程一：MySQL数据库自增主键归零的几种方法](https://github.com/sosout/dev-tools/tree/master/vue-webpack/configure)
+[教程一：MySQL数据库自增主键归零的几种方法](https://github.com/sosout/dev-tools/tree/master/database/rzero)
 
