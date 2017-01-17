@@ -1,7 +1,5 @@
-# dev-tools
+# nginx
 这里收集了linux服务器下nginx相关操作
-
-##nginx
 
 ####nginx查看配置文件nginx.conf路径
 
