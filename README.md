@@ -12,5 +12,6 @@
 
 ##数据库-mysql
 [教程一：Linux下登录MySQL](https://github.com/sosout/dev-tools/tree/master/database/rzero)
-[教程一：Linux下MySQL数据库自增主键归零的几种方法](https://github.com/sosout/dev-tools/tree/master/database/rzero)
+
+[教程二：Linux下MySQL数据库自增主键归零的几种方法](https://github.com/sosout/dev-tools/tree/master/database/rzero)
 
