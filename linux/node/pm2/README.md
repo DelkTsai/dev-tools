@@ -57,7 +57,7 @@ pm2 updatePM2                        #升级pm2
 pm2 --help
 ```
 ### 十二、PM2目录结构：
-* 1、默认的目录是：当前用于的家目录下的.pm2目录（此目录可以自定义，请参考：十二、自定义启动文件），详细信息如下：
+* 1、默认的目录是：当前用于的家目录下的.pm2目录（此目录可以自定义，请参考：十三、自定义启动文件），详细信息如下：
 ```js
 $HOME/.pm2                   #will contain all PM2 related files
 $HOME/.pm2/logs              #will contain all applications logs
@@ -68,7 +68,7 @@ $HOME/.pm2/rpc.sock          #Socket file for remote commands
 $HOME/.pm2/pub.sock          #Socket file for publishable events
 $HOME/.pm2/conf.js           #PM2 Configuration
 ```
-### 十二、自定义启动文件：
+### 十三、自定义启动文件：
 * 1、创建一个test.json的示例文件，格式如下：
 ```js
 {
