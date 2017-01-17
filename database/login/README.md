@@ -1,28 +1,14 @@
 # Linux下登录MySQL
-MySQL自增主键归零的方法：
+格式：mysql -h主机地址 -u用户名－p用户密码
 
-### 一、如果曾经的数据都不需要的话，可以直接清空所有数据，并将自增字段恢复从1开始计数：
+### 一、连接到本机上的MYSQL：
+* 1、开启MySQL服务后，一般可以直接键入命令mysql -uroot -p，回车后提示你输密码：
 ```js
-truncate table table_name;
+mysql -uroot -p
 ```
-### 二、当用户没有truncate的权限时且曾经的数据不需要时：
-* 1、删除原有主键：
-
-```js
-alter table 'table_name' drop 'id';
-```
-* 2、添加新主键：
+### 二、连接到远程主机上的MySQL：
+* 1、假设远程主机的IP为：10.0.0.1，用户名为root,密码为123。则键入以下命令（注：u与root可以不用加空格，其它也一样）：
 
 ```js
-alter table 'table_name' add 'id' int(11) not null first;
-```
-* 3、设置新主键：
-
-```js
-alter table 'table_name' modify column 'id' int(11) not null auto_increment, add primary key(id);
-```
-### 三、当用户没有权限时：
-* 1、可以直接设置数据表的 AUTO_INCREMENT 值为想要的初始值，比如10000：
-```js
-alter table 'table_name' auto_increment = 10000;
+mysql -h10.0.0.1 -uroot -p123
 ```
